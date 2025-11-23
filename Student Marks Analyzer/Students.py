@@ -10,7 +10,7 @@ class Students:
         
         self.name = name
         self.student_id = student_id
-        self
+        self.marks = marks
     
     def get_details(self):
         return f"Name: {self.name}, ID: {self.student_id}"
@@ -19,7 +19,7 @@ class Students:
     
     def get_student_marks(self):
         return self.marks
-
+    
     @staticmethod
     def show_all_ids():
         return Students.unique_student_ids
