@@ -26,9 +26,24 @@ def calculations(num1, num2, operation):
         case _:
             return "Error: Invalid operation" 
 
-num1 = float(input("Enter a number: "))
-num2 = float(input("Enter another number: "))
-operation = input("Enter an operation (+, -, *, /): ")
+exits = False
+print("Welcome to the calculator!")
+print("You can perform operations: +, -, *, / for exit type 'exit'")
 
-result = calculations(num1, num2, operation)
-print(f"The result is: {result}")
+num1 = float(input(""))
+num2 = 0
+while not exits:
+    try:  
+        operation = input("")
+        num2 = float(input(""))
+        if isinstance(num1, str) or isinstance(num2, str):
+            print("Exiting the calculator. Goodbye!")
+            exits = True
+            break
+        if operation.lower() == 'exit' or num1 == 'exit' or num2 == 'exit':
+            exits = True
+            break
+        num1 = calculations(num1, num2, operation)
+        print(f"{num1}")
+    except ValueError or TypeError:
+        print("Invalid input. Please enter numeric values for numbers.")
