@@ -36,14 +36,10 @@ while not exits:
     try:  
         operation = input("")
         num2 = float(input(""))
-        if isinstance(num1, str) or isinstance(num2, str):
-            print("Exiting the calculator. Goodbye!")
-            exits = True
-            break
         if operation.lower() == 'exit' or num1 == 'exit' or num2 == 'exit':
             exits = True
             break
         num1 = calculations(num1, num2, operation)
         print(f"{num1}")
-    except ValueError or TypeError:
+    except (ValueError, TypeError):
         print("Invalid input. Please enter numeric values for numbers.")
