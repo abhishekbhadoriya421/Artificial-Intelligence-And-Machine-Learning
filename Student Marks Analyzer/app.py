@@ -42,7 +42,7 @@ def main():
                             print(f"Maximum Scorer: {student.get_details()}")
                             details = student.get_details()
                             marks = student.get_student_marks()
-                            print(f"Marks: Hindi={marks.hindi}, English={marks.english}, Maths={marks.maths}, Science={marks.science}, Social={marks.social} \n Total={marks.get_total()}")
+                            print(f"Marks: Hindi={marks.hindi}, English={marks.english}, Maths={marks.maths}, Science={marks.science}, Social={marks.social} \nTotal={marks.get_total()}")
                             break
                 case 3:
                     min_scorer_id = analyzer.get_minimum_scorer()
@@ -51,7 +51,7 @@ def main():
                             print(f"Minimum Scorer: {student.get_details()}")
                             details = student.get_details()
                             marks = student.get_student_marks()
-                            print(f"Marks: Hindi={marks.hindi}, English={marks.english}, Maths={marks.maths}, Science={marks.science}, Social={marks.social} \n Total={marks.get_total()}")
+                            print(f"Marks: Hindi={marks.hindi}, English={marks.english}, Maths={marks.maths}, Science={marks.science}, Social={marks.social} \nTotal={marks.get_total()}")
                             break
                 case 4:
                     print(f"Average Marks: {analyzer.get_average_marks()}")
