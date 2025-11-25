@@ -24,11 +24,17 @@ def count_word_frequency(para: str):
         else:
             words[word] = 1
             
-    for key,value in words.items():
-        print(key,': ',value)
-        
-        
-para = 'I    love     python'
+    return words
+    
+def sort_word_frequency(words: dict):
+    sorted_words = dict(sorted(words.items(), key=lambda item: item[1], reverse=True))
+    return sorted_words
+     
+para = '     I    love     python because     Python  is easy     and python is powerful      '
 
-
-count_word_frequency(para)
+words = count_word_frequency(para)
+def a(item):
+    return item[1]
+print("Word Frequency Count:")
+print(dict(sorted(words.items(),key= a,reverse=True)))
+# print(sort_word_frequency(words))
