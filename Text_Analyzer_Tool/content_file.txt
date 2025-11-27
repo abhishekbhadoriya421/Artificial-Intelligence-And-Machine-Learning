@@ -1,0 +1,5 @@
+Python is one of the most popular programming languages in the world. 
+It is known for its simplicity, readability, and versatility. 
+Developers use Python for web development, data analysis, automation, and even artificial intelligence! 
+Because of its clear syntax, beginners find it easy to learn, while professionals use it to build complex applications. 
+In short, Python helps you think like a programmer — cleanly, efficiently, and logically.
