@@ -15,7 +15,7 @@ def file_Write(fileName: str, data: str = "Sample data to write to file."):
         fileWrite.close()
     except Exception as e:
         print(f"An error occurred while writing to the file: {e}")
-        
+      
 fileName = 'data.csv'
 file_Read(fileName)
 file_Write(fileName,'this is empty file now')
