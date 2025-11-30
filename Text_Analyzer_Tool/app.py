@@ -1,5 +1,6 @@
 from read_file import read
 from count_words import get_word
+from Sentence_analyzer import sentence_analyzer
 
 def main():
     print("Welcome to the Text Analyzer Tool!")
@@ -16,6 +17,7 @@ def main():
             # print(words['words'])
             # print('\n')
             # print('Unique Words: ', words['unique_words'])
+            sentence_analyzer(content)
         else:
             print("No content to analyze.")
     except Exception as e:

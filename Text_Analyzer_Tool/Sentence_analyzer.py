@@ -10,5 +10,10 @@ def sentence_analyzer(text: str):
     }
     
     sentence_endings = ['.','!','?']
-    sentence_count = text.split('.') + text.split('!') + text.split('?')
+    sentences = text.split('.') + text.split('!') + text.split('?')
+    sentence['sentence_count'] = len([s for s in sentences if(s.strip())])
+    sentence['sentences'] = [s for s in sentences if(s.strip())]
+    for sentence_text in sentence['sentences']:
+        print(f"- {sentence_text.strip()}")
+
     
