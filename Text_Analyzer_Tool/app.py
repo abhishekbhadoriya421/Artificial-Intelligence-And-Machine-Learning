@@ -1,4 +1,5 @@
 from read_file import read
+from count_words import get_word
 
 def main():
     print("Welcome to the Text Analyzer Tool!")
@@ -6,7 +7,15 @@ def main():
         file_path = 'content_file.txt'
         content = read(file_path)
         if content:
-            pass
+            words = dict(get_word(content))
+            # print('Word Count: ', words['word_count'])
+            # print('Unique Word Count: ', len(words['unique_words']))
+            # print('Total Character With Space: ', words['char_count_with_space'])
+            # print('Total Character Without Space: ', words['char_count_without_space'])
+            # print('\n')
+            # print(words['words'])
+            # print('\n')
+            # print('Unique Words: ', words['unique_words'])
         else:
             print("No content to analyze.")
     except Exception as e:

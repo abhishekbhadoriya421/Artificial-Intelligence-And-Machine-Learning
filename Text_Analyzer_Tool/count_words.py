@@ -6,6 +6,7 @@ def get_word(text: str)-> int:
     words = {
         'word_count': 0,
         'words': [],
+        'word_frequency': {},
         'unique_words': set(),
         'char_count_with_space': 0,
         'char_count_without_space': 0
@@ -22,6 +23,10 @@ def get_word(text: str)-> int:
             words['words'].append(word)
             words['unique_words'].add(word)
             words['word_count'] += 1
+            if word in words['word_frequency']:
+                words['word_frequency'][word] += 1
+            else:
+                words['word_frequency'][word] = 1
             word = ''
         elif char != ' ' and char != '\n' and char != '\t' and char != '\r' and char not in skip_char:
             word += char
