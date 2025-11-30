@@ -17,7 +17,7 @@ def main():
             # print(words['words'])
             # print('\n')
             # print('Unique Words: ', words['unique_words'])
-            sentence_analyzer(content)
+            # sentence_analyzer(content)
         else:
             print("No content to analyze.")
     except Exception as e:

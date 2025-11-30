@@ -13,6 +13,4 @@ def sentence_analyzer(text: str):
     sentence['sentence_count'] = len([s for s in sentences if(s.strip())])
     sentence['sentences'] = [s for s in sentences if(s.strip())]
     for sentence_text in sentence['sentences']:
-        print(f"- {sentence_text.strip()}")
-
-    
+        print(f"- {sentence_text.strip()}")  

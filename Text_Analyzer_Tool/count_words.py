@@ -9,7 +9,9 @@ def get_word(text: str)-> int:
         'word_frequency': {},
         'unique_words': set(),
         'char_count_with_space': 0,
-        'char_count_without_space': 0
+        'char_count_without_space': 0,
+        'most_repeating_word':0,
+        'top_5_words':[]
     }
     
     text = trimed_text.lower()
@@ -34,4 +36,15 @@ def get_word(text: str)-> int:
         words['words'].append(word)
         words['unique_words'].add(word)
         words['word_count'] += 1
+
+    words['word_frequency'] = dict(sorted(words['word_frequency'].items(), key = lambda item: item[1],reverse=True ))
+    count = 1
+    for key in words['word_frequency'].keys():
+        if(count>=6):
+            break
+        words['top_5_words'].append(key)
+        count+=1
+    print(words['top_5_words'])
+
+
     return words
